@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Авторизация | RuChat</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="/">RuChat | Личный кабинет</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarUnion" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse d-sm-inline-flex flex-sm-row-reverse" id="navbarUnion">
+                    
+
+ 
+ 
+
+<ul class="navbar-nav">
+    
+        <li class="nav-item">
+            <a class="nav-link " id="register" href="/Account/Register">Регистрация</a>
+        </li>
+        <li class="nav-item" style="margin-right:10px;">
+            <a class="nav-link" id="login" href="/Account/Login">Логин</a>
+        </li>
+    <li class="nav-item" >
+        <div class="card border-primary bg-body bg-opacity-75 rounded-3" style="display: inline-block; padding-left: 10px;padding-right: 10px;">
+            <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">РУС</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-primary" href="/SetLang?culture=en&returnUrl=/Account/Login">ENG</a>
+                    </li>
+            </ul>
+        </div>
+    </li>
+</ul>
+
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="true">Полезные ссылки</a>
+                            <div class="dropdown-menu" data-bs-popper="static">
+                                <a class="dropdown-item" href="/Profile">Расширенный редактор профилей</a>
+                                <a class="dropdown-item" href="/Etc">Правила и другие документы</a>
+                                <a class="dropdown-item disabled" disabled>Инструкция по настройке телевизора</a>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            
+
+<div class="row justify-content-center">
+    <div class="col-md-5 gap-3 align-self-center" style="margin-top:50px;">
+        <h1 style="text-align:center;">Авторизация</h1>
+        <section>
+            <form id="account" method="post">
+                <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+                <div class="form-group">
+                    <div class="form-floating">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="Электронная почта" data-val="true" data-val-email="The &#x41B;&#x43E;&#x433;&#x438;&#x43D; field is not a valid e-mail address." data-val-required="&#x42D;&#x43B;&#x435;&#x43A;&#x442;&#x440;&#x43E;&#x43D;&#x43D;&#x430;&#x44F; &#x43F;&#x43E;&#x447;&#x442;&#x430; (&#x43E;&#x431;&#x44F;&#x437;&#x430;&#x442;&#x435;&#x43B;&#x44C;&#x43D;&#x43E;)" name="Input.Email" value="">
+                        <label for="floatingInput">Электронная почта</label>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group" style="margin-top:10px;">
+                    <div class="form-floating">
+                        <input type="password" class="form-control" id="floatingPassword" placeholder="Пароль" data-val="true" data-val-required="&#x41D;&#x435;&#x43E;&#x431;&#x445;&#x43E;&#x434;&#x438;&#x43C; &#x43F;&#x430;&#x440;&#x43E;&#x43B;&#x44C;" name="Input.Password">
+                        <label for="floatingPassword">Пароль</label>
+                    </div>
+                    <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" id="Input_Token" name="Input.Token" value="" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="col-md-12 btn btn-lg btn-outline-light rounded-2" style="margin-top:20px; width:100%;" data-sitekey="6Ld31hocAAAAANc71dujbRi1dQUP0mpm4nTLu"
+                            data-callback='onSubmit'
+                            data-action='submit'>
+                        Войти
+                    </button>
+                </div>
+                <div class="row justify-content-center" style="margin-top:20px;">
+                    <div class="row justify-content-between">
+                        <div class="col-6">
+                            <a id="forgot-password" href="/Account/ForgotPassword">Забыли пароль?</a>
+                        </div>
+                        <div class="col-6" style="text-align:end;">
+                            <a href="/Account/Register?returnUrl=%2F">Нет аккаунта?</a>
+                        </div>
+                    </div>
+                </div>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8D9fytWbkWFMl3v5kKWYm_Pg_hWoYB7s02aXgkZjbZscBBMJu-WF7UFGl150K5XrBeP1OBKAVF2CMSS9OhLglPjy4mvSfcAq9sfXmM41G3lP1bCdTKmFT6VNxiC_nAigftGyYrce50ImKtZm9lcWess" /></form>
+        </section>
+    </div>
+</div>
+
+
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container" style="text-align:end;">
+&#xA9; 2025 RuChat         </div>
+    </footer>
+
+    <script src="/lib/jquery/dist/jquery.min.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18"></script>
+
+    
+    <script src="/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+<script src="/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ld31hocAAAAANc71dujbRi1dQUP0mpm4nTLu"></script>
+    <script>
+        grecaptcha.ready(function () {
+            grecaptcha.execute('6Ld31hocAAAAANc71dujbRi1dQUP0mpm4nTLu', { action: 'homepage' }).then(function (token) {
+                    console.log(token);
+                    $('#Input_Token').val(token);
+                });
+            });
+    </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9acca843fa0bd2fa',t:'MTc2NTUzNjU4OQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4f98cc70814842e08f106142cafdeb51","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
